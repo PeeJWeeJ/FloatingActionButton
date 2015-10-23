@@ -82,6 +82,14 @@ public class FloatingActionButton extends ImageButton {
         init(context, attrs);
     }
 
+    public void setForceHide(boolean forceHide) {
+        this.forceHide = forceHide;
+    }
+
+    public void setForceShow(boolean forceShow) {
+        this.forceShow = forceShow;
+    }
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -309,11 +317,15 @@ public class FloatingActionButton extends ImageButton {
     }
 
     public void show(boolean animate) {
-        toggle(true, animate, false);
+        if(!forceHide) {
+            toggle(true, animate, false);
+        }
     }
 
     public void hide(boolean animate) {
-        toggle(false, animate, false);
+        if(!forceShow) {
+            toggle(false, animate, false);
+        }
     }
 
     private void toggle(final boolean visible, final boolean animate, boolean force) {
