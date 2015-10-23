@@ -5,6 +5,8 @@ FloatingActionButton
 
 ### Description
 
+Added ability for force show/hide the button. e.g. when you set forceShow to true, the button will not hide.
+
 Android [floating action button] which reacts on scrolling events. Becomes visible when an attached target is scrolled up and invisible when scrolled down.
 
 ![Demo](art/demo.gif)
