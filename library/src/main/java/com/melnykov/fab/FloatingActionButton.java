@@ -63,6 +63,9 @@ public class FloatingActionButton extends ImageButton {
 
     private boolean mMarginsSet;
 
+    private boolean forceShow;
+    private boolean forceHide;
+
     private final Interpolator mInterpolator = new AccelerateDecelerateInterpolator();
 
     public FloatingActionButton(Context context) {
