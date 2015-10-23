@@ -84,10 +84,16 @@ public class FloatingActionButton extends ImageButton {
 
     public void setForceHide(boolean forceHide) {
         this.forceHide = forceHide;
+        if(forceHide){
+            forceShow = false;
+        }
     }
 
     public void setForceShow(boolean forceShow) {
         this.forceShow = forceShow;
+        if(forceShow){
+            forceHide = false;
+        }
     }
 
     @Override
